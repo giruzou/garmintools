@@ -259,7 +259,7 @@ print_bounds_tag ( const position_type * sw,
                    int                   spaces )
 {
   print_spaces(fp,spaces);
-  fprintf(fp,"<bounds minlat=\"%f\" minlon=\"%f\" maxlat=\"%f\" maxlon=\"%f\" />\n",
+  fprintf(fp,"<bounds minlat=\"%.9f\" minlon=\"%.9f\" maxlat=\"%.9f\" maxlon=\"%.9f\" />\n",
       SEMI2DEG(sw->lat), SEMI2DEG(sw->lon),
       SEMI2DEG(ne->lat), SEMI2DEG(ne->lon));
 }
@@ -272,9 +272,9 @@ print_route_points ( route_point * points,
   route_point * rp = points;
   while (rp->t > 0) {
     print_spaces(fp, spaces);
-    fprintf(fp, "<trkpt lat=\"%f\" lon=\"%f\">\n", rp->lat, rp->lon);
+    fprintf(fp, "<trkpt lat=\"%.9f\" lon=\"%.9f\">\n", rp->lat, rp->lon);
     print_spaces(fp, spaces+2);
-    fprintf(fp, "<ele>%f</ele>\n", rp->elev);
+    fprintf(fp, "<ele>%.9f</ele>\n", rp->elev);
     print_time_tag(rp->t + TIME_OFFSET, fp, spaces+2);
     if (rp->lap) {
       print_spaces(fp, spaces+2);
