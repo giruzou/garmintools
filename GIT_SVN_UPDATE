@@ -1,0 +1,13 @@
+How to keep track of SVN master repository
+==========================================
+
+To make a git clone a full git-svn repository run the following commands:
+
+  1. git clone git@github.com:embear/garmintools.git
+  2. cd garmintools
+  3. git update-ref refs/remotes/git-svn origin/master
+  4. git svn init http://garmintools.googlecode.com/svn/trunk/
+  5. git svn fetch
+
+Now "git svn rebase" can be used to keep track of the latest changes done by
+the development team in the SVN master repository.
