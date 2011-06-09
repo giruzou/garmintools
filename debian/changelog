@@ -1,0 +1,64 @@
+garmin-forerunner-tools (0.10-2) unstable; urgency=low
+
+  * Debian/watch: use complete path for download url (closes: #550736).
+    Thanks a lot to Yan Morin for the patch!
+  * Converted to source format 3.0 (quilt):
+    - added debian/source/format
+  * Standards-Version 3.8.3 (no change)
+
+ -- Ralf Treinen <treinen@debian.org>  Thu, 03 Dec 2009 21:12:31 +0100
+
+garmin-forerunner-tools (0.10-1) unstable; urgency=low
+
+  [ Noèl Köthe ]
+  * debian/control added Vcs-Git and Vcs-Browser
+
+  [ Ralf Treinen ]
+  * New upstream release (closes: #521490).
+  * Standards-Version 3.8.1 (no change)
+  * debian/copyright: point to GPL-2
+  * Renamed files in debian/:
+    {dirs,docs} -> garmin-forerunner-tools.{dirs,docs}
+
+ -- Ralf Treinen <treinen@debian.org>  Sat, 28 Mar 2009 15:36:37 +0100
+
+garmin-forerunner-tools (0.09-2) unstable; urgency=low
+
+  * Libtoolize with newer version of libtools (closes: #493696).
+  * Add Uploader Noèl Köthe.
+  * Install udev rule for foreunner devices.
+  * Long description: explain difference to gpsbabel.
+
+ -- Ralf Treinen <treinen@debian.org>  Sun, 31 Aug 2008 17:07:20 +0200
+
+garmin-forerunner-tools (0.09-1) unstable; urgency=low
+
+  * New upstream release (closes: #491639). This release now contains the
+    new tools garmin_gpx (closes: #483992) and garmin_gchart.
+  * Added a NEWS.Debian file.
+  * Updated package description to include the Edge series, and conversion
+    to gpx.
+  * Standards-Version 3.8.0 (no change).
+  * debian/rules clean target: use upstream's distclean, not clean
+  * configure: pass explicit --mandir to fix a bug in upstream's configure
+
+ -- Ralf Treinen <treinen@debian.org>  Sun, 03 Aug 2008 20:06:50 +0200
+
+garmin-forerunner-tools (0.07-2) unstable; urgency=low
+
+  * debian/rules: fix bashism (Closes: #478384).
+
+ -- Ralf Treinen <treinen@debian.org>  Wed, 30 Apr 2008 23:04:52 +0200
+
+garmin-forerunner-tools (0.07-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ralf Treinen <treinen@debian.org>  Wed, 02 Apr 2008 18:57:44 +0200
+
+garmin-forerunner-tools (0.05-1) unstable; urgency=low
+
+  * Initial release (Closes: #467039)
+
+ -- Ralf Treinen <treinen@debian.org>  Sun, 30 Mar 2008 22:17:34 +0200
+
