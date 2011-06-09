@@ -79,11 +79,14 @@ gchart_e_encode ( float32 num, float32 max, char * str )
   num = 4095*num/max;
   /* printf(" %f\n", num); */
   if (num < 0 || num > 4095 ) {
-    str = "__";
+    str[0] = '_';
+    str[1] = '_';
+    str[2] = '\0';
+  } else {
+    str[0] = gchart_e_encode_single((int)num/64);
+    str[1] = gchart_e_encode_single(num - ((int)(num/64)*64) );
+    str[2] = '\0';
   }
-  str[0]=gchart_e_encode_single((int)num/64);
-  str[1]=gchart_e_encode_single(num - ((int)(num/64)*64) );
-  str[2]='\0';
 }
 
 
